@@ -9,15 +9,6 @@ import { BrowserRouter } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
 import { HelmetProvider } from "react-helmet-async";
 
-import axios from 'axios';
-
-// Устанавливаем базовый URL для всех запросов
-axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
-
-// Теперь все запросы будут автоматически использовать этот URL
-axios.get('/users')
-  .then(response => console.log(response.data))
-  .catch(error => console.error(error));
   
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
